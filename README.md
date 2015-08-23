@@ -12,7 +12,9 @@ Both raw sets (TEST and TRAIN) came only with the measurements unlabeled. The or
 
 The 5 steps required should get this raw data and generate a new dataset merging the TEST and TRAIN data, labeling the variables, activities and subjects, and calculate the mean for each measurement (which contains a mean() or sd() ) by subject and activity. So we should produce a smaller dataset averaging the multiples readings of the varibles which are contained in the raw data. The result is a tidy dataset with only one value per subject-activity pair for each of the variables.
 
-## STEP 1: Merges the training and the test sets to create one data set.
+The Script "run_analysis.R" contains all the code to perform the STEPS described below!
+
+### STEP 1: Merges the training and the test sets to create one data set.
 
 First it's necessary to download the ZIP files to your working directory.
 The Zip files are located in the web address below: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -24,7 +26,7 @@ original datasets are preserved one on the top of the other.
 
 The result is a complete dataset with 10299 rows and 561 columns. Step 1 done!
 
-## STEP 2: Extracts only the measurements on the mean and standard deviation for each measurement
+### STEP 2: Extracts only the measurements on the mean and standard deviation for each measurement
 
  Here we need to take a look to the "features.txt" file that came with the ZIP data.
  There we can see the names of the 561 variables provided and guess which are 
@@ -50,7 +52,7 @@ so that we keep all the rows but only select the columns present in the IndexFin
 The completeMeanSd now contains all measurements for the Mean() and sd() variables
 so STEP 2 completed!!
 
-## STEP 3: Uses descriptive activity names to name the activities in the data set.
+### STEP 3: Uses descriptive activity names to name the activities in the data set.
 
 Now we should start labeling the activities to prepare for the Step 5 when it
 will be required to compute the averages for each activity and subject.
@@ -75,7 +77,7 @@ which contains the second column of "activities" where labels were stored.
 
 So Step 3 is completed ! The dataset contains a column of activities labeled!
 
-##STEP 4: Appropriately labels the data set with descriptive variable names. 
+### STEP 4: Appropriately labels the data set with descriptive variable names. 
 
 We already have the "labels" loaded into R but we need to select only those
 variable labels that are indexed by our "IndexFinal". We can create a new dataset
@@ -87,7 +89,7 @@ To apply those VarLabels to the dataset we use the colnames function:
 
 Step 4 is completed !!
 
-## STEP 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+### STEP 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 We haven't yet inserted the subjects into the dataset. So the first step is
 to load them into R and combine the subjects from TEST and TRAIN the same way we
@@ -117,6 +119,6 @@ Finally we can export the tidyLong dataset to a TXT file
 
 Step 5 completed !!!
 
-The 
+### All the steps described here are include as commentaries in the "run_analysis.R" script to facilitate the review of the code itsef !!
 
 
