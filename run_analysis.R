@@ -5,12 +5,11 @@
 #
 # STEP 1:Merges the training and the test sets to create one data set.
 #       
-# First it's necessary to download the Samsung files to your working directory
+# First it's necessary to download the Samsung files to your WORKING DIRECTORY
 # the Zip files are located in the web address below:
 # https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 #
 # After Unzipping them you need to load the datasets TEST and TRAIN into R:
-#
 #
 test<-read.table("./UCI HAR Dataset/test/X_test.txt", header=FALSE, sep="", dec=".")
 train<-read.table("./UCI HAR Dataset/train/X_train.txt", header=FALSE, sep="", dec=".")
