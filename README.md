@@ -106,9 +106,9 @@ After calling the "reshapes2" package we can melt the measurements into one
 column named "variable" and the results of the calculated means for each
 are stored in the "Mean Value" column:
 
-Finally we can export the tidyLong dataset to a TXT file
+Finally we export the "tidyLong" dataset to a TXT file in the same working directory !!
 
-Step 5 completed !!!
+Step 5 completed !
 
 ### All the steps described here are include as commentaries in the "run_analysis.R" script to facilitate the review of the code itsef !!
 
