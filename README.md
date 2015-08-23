@@ -1,2 +1,5 @@
 # GettingDataCourseProject
-repo to store files for the Course Project of Getting and Cleaning Data course
+#
+This README file details the Steps taken to complete the Course Project of the Getting and Cleaning Data course
+
+The Course Project 
