@@ -14,10 +14,6 @@
 test<-read.table("./UCI HAR Dataset/test/X_test.txt", header=FALSE, sep="", dec=".")
 train<-read.table("./UCI HAR Dataset/train/X_train.txt", header=FALSE, sep="", dec=".")
 
-# The previous commands loaded the raw datasets. To check if they have the same number
-# (and names!) of variables you should run the following code: It should print TRUE !!
-
-print(identical(names(test),names(train)))
 
 # To merge the two raw dataset without mixing the order of the rows or columns
 # we can bind them together via the rbind function. This way we can assure the 
